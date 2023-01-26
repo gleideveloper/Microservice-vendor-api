@@ -1,2 +1,2 @@
-# Project Batscan - Microservice Company Api
+# Project Batscan - Microservice Vendor Api
 Repositório para armazenar o fabricante do Mac Address
