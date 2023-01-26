@@ -56,7 +56,7 @@ public class CompanyController {
         if (companyService.existsByMacAddress(companyDto.getMacPrefix())) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: MacPrefix is already exists!");
         }
-        var companyModel = new CompanyModel();
+        CompanyModel companyModel = new CompanyModel();
         BeanUtils.copyProperties(companyDto, companyModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(companyService.save(companyModel));
     }
@@ -80,7 +80,7 @@ public class CompanyController {
         if (!companyModelOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("MacPrefix not found!");
         }
-        var companyModel = new CompanyModel();
+        CompanyModel companyModel = new CompanyModel();
         BeanUtils.copyProperties(companyDto, companyModel);
         companyModel.setMacPrefix(companyModelOptional.get().getMacPrefix());
         return ResponseEntity.status(HttpStatus.CREATED).body(companyService.save(companyModel));
