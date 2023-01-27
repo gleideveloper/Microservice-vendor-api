@@ -30,7 +30,7 @@ public class SwaggerConfig {
     private ApiInfo metaInfo() {
 
         return new ApiInfo(
-                "Projeto Batscan HandOn-DevTitans",
+                "Microserviço Batscan HandOn-DevTitans",
                 "API REST de Cadastro de Vendor.",
                 "1.0",
                 "Terms of Service",
